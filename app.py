@@ -36,3 +36,6 @@ if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))  # قراءة رقم المنفذ من متغير البيئة PORT أو استخدام 5000 افتراضيًا
     app.run(host="0.0.0.0", port=port)
 
+@app.route('/about')
+def about():
+    return render_template("about.html")
