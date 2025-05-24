@@ -8,7 +8,7 @@ def home():
     # الصفحة الرئيسية تعرض نموذج البحث فقط
     return render_template("home.html")
 
-@app.route('/movie')
+@app.route('/search')
 def movie():
     title = request.args.get('title')
     if not title:
