@@ -5,7 +5,6 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    # الصفحة الرئيسية تعرض نموذج البحث فقط
     return render_template("home.html")
 
 @app.route('/movie')
@@ -23,4 +22,3 @@ def about():
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
-
