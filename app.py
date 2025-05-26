@@ -19,6 +19,12 @@ def movie():
 @app.route('/about')
 def about():
     return render_template("about.html")
+    @app.route('/popular')
+def popular():
+    popular_titles = ["Inception", "The Dark Knight", "Titanic", "Interstellar", "The Matrix"]
+    movies = [fetch_movie_data(title) for title in popular_titles if fetch_movie_data(title)]
+    return render_template("popular.html", movies=movies)
+
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
