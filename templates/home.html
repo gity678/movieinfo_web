@@ -13,25 +13,16 @@
         h1 {
             color: #343a40;
         }
-        form {
-            margin-top: 30px;
-        }
-        input[type="text"] {
-            padding: 10px;
-            width: 300px;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-            text-align: right;
-        }
-        input[type="submit"] {
+        a {
+            display: inline-block;
+            margin-top: 20px;
             padding: 10px 20px;
-            border: none;
             background-color: #007bff;
             color: white;
+            text-decoration: none;
             border-radius: 5px;
-            cursor: pointer;
         }
-        input[type="submit"]:hover {
+        a:hover {
             background-color: #0056b3;
         }
     </style>
@@ -39,9 +30,9 @@
 <body>
     <h1>مرحبًا بكم في تطبيق معلومات الأفلام</h1>
 
-    <form action="/movie" method="get">
-        <input type="text" name="title" placeholder="اكتب اسم الفيلم" required>
-        <input type="submit" value="ابحث">
-    </form>
+    <a href="/movie">البحث عن فيلم</a>
+    <br><br>
+    <a href="/popular">أشهر الأفلام</a> <!-- هذا هو الرابط الجديد -->
+
 </body>
 </html>
