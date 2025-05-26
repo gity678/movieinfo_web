@@ -13,26 +13,47 @@
         h1 {
             color: #343a40;
         }
-        a {
-            display: inline-block;
-            margin-top: 20px;
+        form {
+            margin-top: 30px;
+        }
+        input[type="text"] {
+            padding: 10px;
+            width: 250px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
             padding: 10px 20px;
             background-color: #007bff;
             color: white;
-            text-decoration: none;
+            border: none;
             border-radius: 5px;
+            margin-right: 10px;
         }
-        a:hover {
+        button:hover {
             background-color: #0056b3;
+        }
+        .nav {
+            margin-top: 40px;
+        }
+        .nav a {
+            margin: 0 10px;
+            color: #007bff;
+            text-decoration: none;
         }
     </style>
 </head>
 <body>
     <h1>مرحبًا بكم في تطبيق معلومات الأفلام</h1>
 
-    <a href="/movie">البحث عن فيلم</a>
-    <br><br>
-    <a href="/popular">أشهر الأفلام</a> <!-- هذا هو الرابط الجديد -->
+    <form action="/movie" method="get">
+        <input type="text" name="title" placeholder="اكتب اسم الفيلم..." required>
+        <button type="submit">بحث</button>
+    </form>
 
+    <div class="nav">
+        <a href="/about">حول التطبيق</a>
+        <a href="/popular">أفلام مشهورة</a>
+    </div>
 </body>
 </html>
